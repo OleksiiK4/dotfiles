@@ -34,6 +34,14 @@ Plug 'nvim-neotest/neotest-python'
 Plug 'Pocco81/auto-save.nvim'
 call plug#end()
 
+" OVERWRITE python env
+let g:python3_host_prog = 'C:/Insightful/.venv/Scripts/python'
+lua <<EOF
+  require('dap-python').setup('C:/Insightful/.venv/Scripts/python')
+
+  require('dap-python').test_runner = 'pytest'
+EOF
+
 lua <<EOF
   local async = require "plenary.async"
 
@@ -55,11 +63,6 @@ lua <<EOF
       require("neotest-plenary")
     },
   })
-
-# OVERRIDE python env
-let g:python3_host_prog = '/path/to/py3nvim/bin/python'
-  require('dap-python').setup('C:/Users/Alexey/AppData/Local/Programs/Python/Python311/python')
-  require('dap-python').test_runner = 'pytest'
 EOF
 
 lua <<EOF
