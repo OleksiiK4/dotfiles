@@ -56,6 +56,8 @@ lua <<EOF
     },
   })
 
+# OVERRIDE python env
+let g:python3_host_prog = '/path/to/py3nvim/bin/python'
   require('dap-python').setup('C:/Users/Alexey/AppData/Local/Programs/Python/Python311/python')
   require('dap-python').test_runner = 'pytest'
 EOF
@@ -183,6 +185,7 @@ set nobackup       "no backup files
 set nowritebackup  "only in case you don't want a backup file while editing
 set autoread
 set noswapfile     "no swap files
+set shada="NONE"
 	
 " set signcolumn=no
 
