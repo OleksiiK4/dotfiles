@@ -35,9 +35,9 @@ Plug 'Pocco81/auto-save.nvim'
 call plug#end()
 
 " OVERWRITE python env
-let g:python3_host_prog = 'C:/Insightful/.venv/Scripts/python'
+let g:python3_host_prog = 'C:/Python311/python'
 lua <<EOF
-  require('dap-python').setup('C:/Insightful/.venv/Scripts/python')
+  require('dap-python').setup('C:/Python311/python')
 
   require('dap-python').test_runner = 'pytest'
 EOF
@@ -206,6 +206,7 @@ nnoremap <silent> <space>tm <cmd>w<cr>:lua require('dap-python').test_method()<C
 nnoremap <silent> <space>tc <cmd>w<cr>:lua require('dap-python').test_class()<CR>
 nnoremap <silent> <space>ee :lua require('dap').repl.open()<CR>
 nnoremap <silent> <space>tb :lua require('dap').toggle_breakpoint()<CR>
+nnoremap <silent> <space>ts :lua require('dap').close()<CR>
 
 " setup mapping to call :LazyGit
 nnoremap <silent> <space>gg :LazyGit<CR>
