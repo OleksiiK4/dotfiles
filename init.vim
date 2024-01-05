@@ -34,7 +34,7 @@ Plug 'nvim-neotest/neotest-python'
 Plug 'Pocco81/auto-save.nvim'
 call plug#end()
 
-" OVERWRITE python env
+" CHANGE REQUIRED overwrite python env
 let g:python3_host_prog = 'C:/Python311/python'
 lua <<EOF
   require('dap-python').setup('C:/Python311/python')
@@ -72,7 +72,7 @@ lspconfig.pyright.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '<space>d', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
@@ -127,12 +127,14 @@ lua <<EOF
       -- completion = cmp.config.window.bordered(),
       -- documentation = cmp.config.window.bordered(),
     },
+    preselect = cmp.PreselectMode.None,
     mapping = cmp.mapping.preset.insert({
       ['<C-b>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+      ["<Tab>"] = cmp.mapping.select_next_item(),
     }),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
@@ -188,25 +190,30 @@ set nobackup       "no backup files
 set nowritebackup  "only in case you don't want a backup file while editing
 set autoread
 set noswapfile     "no swap files
-set shada="NONE"
+lua <<EOF
+  vim.opt.shadafile="NONE"
+EOF
+
 	
 " set signcolumn=no
 
 " Find files using Telescope command-line sugar.
-nnoremap <space>ff <cmd>Telescope find_files<cr>
-nnoremap <space>fg <cmd>Telescope live_grep<cr>
-nnoremap <space>fb <cmd>Telescope current_buffer_fuzzy_find<cr>
+nnoremap <space>ff <cmd>wa<cr><cmd>Telescope find_files<cr>
+nnoremap <space>fg <cmd>wa<cr><cmd>Telescope live_grep<cr>
+nnoremap <space>fb <cmd>wa<cr><cmd>Telescope current_buffer_fuzzy_find<cr>
 
 " Using Lua functions
 nnoremap <space>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <space>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <space>fb <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
 
-nnoremap <silent> <space>tm <cmd>w<cr>:lua require('dap-python').test_method()<CR>
-nnoremap <silent> <space>tc <cmd>w<cr>:lua require('dap-python').test_class()<CR>
+nnoremap <silent> <space>tm <cmd>wa<cr>:lua require('dap-python').test_method()<CR>
+nnoremap <silent> <space>tc <cmd>wa<cr>:lua require('dap-python').test_class()<CR>
 nnoremap <silent> <space>ee :lua require('dap').repl.open()<CR>
 nnoremap <silent> <space>tb :lua require('dap').toggle_breakpoint()<CR>
 nnoremap <silent> <space>ts :lua require('dap').close()<CR>
+nnoremap <silent> <space>cc :lua require('dap').continue()<CR>
+nnoremap <silent> <space>pp :lua require('dap').pause()<CR>
 
 " setup mapping to call :LazyGit
 nnoremap <silent> <space>gg :LazyGit<CR>
