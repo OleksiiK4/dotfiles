@@ -34,7 +34,7 @@ Plug 'nvim-neotest/neotest-python'
 Plug 'Pocco81/auto-save.nvim'
 call plug#end()
 
-" CHANGE REQUIRED overwrite python env
+" FIXME overwrite python env
 let g:python3_host_prog = 'C:/Python311/python'
 lua <<EOF
   require('dap-python').setup('C:/Python311/python')
@@ -51,8 +51,12 @@ lua <<EOF
   	},
   })
 
-  require('telescope').setup()
-  -- require('telescope').load_extension('fzy_native')
+ require('telescope').setup{
+  defaults = {
+    file_sorter =  require'telescope.sorters'.get_fzy_sorter,
+    generic_sorter =  require'telescope.sorters'.get_fzy_sorter,
+  }
+ }
 
   require("neotest").setup({
     adapters = {
@@ -197,15 +201,11 @@ EOF
 	
 " set signcolumn=no
 
-" Find files using Telescope command-line sugar.
-nnoremap <space>ff <cmd>wa<cr><cmd>Telescope find_files<cr>
-nnoremap <space>fg <cmd>wa<cr><cmd>Telescope live_grep<cr>
-nnoremap <space>fb <cmd>wa<cr><cmd>Telescope current_buffer_fuzzy_find<cr>
 
-" Using Lua functions
-nnoremap <space>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <space>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <space>fb <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
+" Using Telescope functions
+nnoremap <space>ff :wa<cr>:lua require('telescope.builtin').find_files()<cr>
+nnoremap <space>fg :wa<cr>:lua require('telescope.builtin').live_grep()<cr>
+nnoremap <space>fb :wa<cr>:lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
 
 nnoremap <silent> <space>tm <cmd>wa<cr>:lua require('dap-python').test_method()<CR>
 nnoremap <silent> <space>tc <cmd>wa<cr>:lua require('dap-python').test_class()<CR>
