@@ -31,17 +31,10 @@ Plug 'nvim-neotest/neotest-python'
 Plug 'Pocco81/auto-save.nvim'
 call plug#end()
 
-
 " FIXME override python env
 lua <<EOF
-local config = {
-    cmd = {'D:\\Programs\\eclipse.jdt.ls\\org.eclipse.jdt.ls.product\\target\\repository\\bin\\jdtls'},
-    root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
-}
-require('jdtls').start_or_attach(config)
-
   local dap_py = require("dap-python")
-  dap_py.setup("C:/Python311/python")
+  dap_py.setup("python")
   dap_py.test_runner = "pytest"
   vim.keymap.set('n', '<Leader>tm', function()
       vim.cmd('wa')
@@ -88,12 +81,65 @@ require("mason").setup(
     }
 )
 
+local actions = require("telescope.actions")
 require("telescope").setup(
     {
         defaults = {
             file_sorter = require("telescope.sorters").get_fzy_sorter,
             generic_sorter = require("telescope.sorters").get_fzy_sorter
-        }
+        },
+        file_ignore_patterns = {
+            '^.git/', '^target/', '^node%_modules/', '^.npm/', '^build/', '%[Cc]ache/', '%-cache',
+            '^.dropbox/', '^.dropbox_trashed/', '%.py[co]', '%.sw?', '%~', '%.a', "%.npz", "^.vscode",
+            '%.sql', '%.tags', '%.gemtags', '%.csv', '%.tsv', '%.tmp', '%.exe', "%.dat", "^dist",
+            '%.old', '%.plist', '%.pdf', '%.log', '%.jpg', '%.jpeg', '%.png', "%.obj", "^release",
+            '%.tar.gz', '%.tar', '%.zip', '%.class', '%.pdb', '%.dll', '%.bak', "%.lib", "^.idea",
+            '%.scan', '%.mca', '__pycache__', '^.mozilla/', '^.electron/', '%.bin', "^debug",
+            '^.vpython-root/', '^.gradle/', '^.nuget/', '^.cargo/', '^.evernote/', "^Debug",
+            '^.azure-functions-core-tools/', '^yay/', '%.class', '%.o', '%.so', "^Release",
+        },
+        path_display = { "smart" },
+            mappings = {
+            i = {
+                ["<esc>"] = actions.close,
+                ["<CR>"] = actions.select_default,
+                ["<C-n>"] = actions.cycle_history_next,
+                ["<C-p>"] = actions.cycle_history_prev,
+                ["<C-j>"] = actions.move_selection_next,
+                ["<C-k>"] = actions.move_selection_previous,
+                ["<C-c>"] = actions.close,
+                ["<C-t>"] = actions.select_tab,
+                ["<C-s>"] = actions.select_horizontal,
+                ["<C-v>"] = actions.select_vertical,
+                ["<C-u>"] = actions.preview_scrolling_up,
+                ["<C-d>"] = actions.preview_scrolling_down,
+                ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+                ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
+                ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
+            },
+            n = {
+                ["<esc>"] = actions.close,
+                ["<CR>"] = actions.select_default,
+                ["s"] = actions.select_horizontal,
+                ["v"] = actions.select_vertical,
+                ["t"] = actions.select_tab,
+                ["K"] = actions.preview_scrolling_up,
+                ["J"] = actions.preview_scrolling_down,
+                ["n"] = actions.cycle_history_next,
+                ["p"] = actions.cycle_history_prev,
+                ["j"] = actions.move_selection_next,
+                ["k"] = actions.move_selection_previous,
+                ["c"] = actions.close,
+                ["H"] = actions.move_to_top,
+                ["M"] = actions.move_to_middle,
+                ["L"] = actions.move_to_bottom,
+                ["gg"] = actions.move_to_top,
+                ["G"] = actions.move_to_bottom,
+                ["q"] = actions.send_to_qflist + actions.open_qflist,
+                ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
+                ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
+            },
+            }
     }
 )
 
@@ -134,6 +180,9 @@ lspconfig.clangd.setup({
   },
 })
 lspconfig.groovyls.setup({})
+lspconfig.rust_analyzer.setup({})
+
+
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
