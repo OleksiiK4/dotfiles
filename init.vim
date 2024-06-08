@@ -21,6 +21,8 @@ Plug 'hrsh7th/vim-vsnip'
 
 Plug 'kdheepak/lazygit.nvim'
 
+Plug 'mrcjkb/rustaceanvim'
+
 Plug 'mfussenegger/nvim-dap'
 Plug 'mfussenegger/nvim-dap-python'
 Plug 'antoinemadec/FixCursorHold.nvim'
@@ -45,28 +47,7 @@ lua <<EOF
       dap_py.test_class()
   end)
 
-local dap = require('dap')
-dap.adapters.gdb = {
-  name = 'gdb',
-  type = "executable",
-  command = "gdb",
-  args = { "-i", "dap"}
-}
 
-local config = {
-    name = 'Launch lldb',
-    --type = 'lldb',
-    type = 'gdb',
-    request = 'launch',
-    program = "D:\\Projects\\mh4-master\\out\\build\\mh4.exe",
-    cwd = '${workspaceFolder}',
-    stopAtBeginningOfMainSubprogram = false,
- }
-
-  dap.configurations.c = { config }
-  dap.configurations.cpp = dap.configurations.c
-  
-  vim.keymap.set('n', '<C-d>', function() dap.run(config) end)
 
 require("auto-save").setup({})
 
@@ -181,8 +162,7 @@ lspconfig.clangd.setup({
 })
 lspconfig.groovyls.setup({})
 lspconfig.rust_analyzer.setup({})
-
-
+lspconfig.gradle_ls.setup({})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

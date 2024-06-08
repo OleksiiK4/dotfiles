@@ -1,5 +1,7 @@
 data = vim.fn.stdpath('data')
-local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
+-- 💀
+-- local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
+local project_name = 'j'
 local workspace_dir = 'D:/Projects/' .. project_name
 
 local config = {
@@ -65,14 +67,10 @@ local config = {
           updateBuildConfiguration = "interactive",
           runtimes = {
             {
-              name = "JavaSE-11",
-              path = "/usr/lib/jvm/java-11-openjdk/",
+              name = "JavaSE-17",
+              path = "C:/Program Files/Java/jdk-17",
               default = true
             },
-            -- {
-            --   name = "JavaSE-17",
-            --   path = "/usr/lib/jvm/java-17-openjdk/",
-            -- },
           },
         },
 
