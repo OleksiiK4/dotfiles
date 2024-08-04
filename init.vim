@@ -1,14 +1,21 @@
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'savq/melange-nvim'
+Plug 'gen740/SmoothCursor.nvim'
+
+Plug 'andymass/vim-matchup'
 
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+
 Plug 'nvim-lua/plenary.nvim'
+
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'williamboman/mason.nvim'
 Plug 'neovim/nvim-lspconfig'
+
 Plug 'mfussenegger/nvim-jdtls'
 
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -21,12 +28,13 @@ Plug 'hrsh7th/vim-vsnip'
 
 Plug 'kdheepak/lazygit.nvim'
 
-Plug 'mrcjkb/rustaceanvim'
-
 Plug 'mfussenegger/nvim-dap'
 Plug 'mfussenegger/nvim-dap-python'
+
 Plug 'antoinemadec/FixCursorHold.nvim'
+
 Plug 'nvim-neotest/neotest'
+Plug 'nvim-neotest/nvim-nio'
 Plug 'nvim-neotest/neotest-plenary'
 Plug 'nvim-neotest/neotest-python'
 
@@ -55,12 +63,13 @@ require("plenary.async")
 
 require("mason").setup(
     {
+        ensure_installed = {'pyright', 'rust_analyzer'},
         pickers = {
             current_buffer_fuzzy_find = {sorting_strategy = "ascending"},
-            ensure_installed = {"pyright", "clangd"}
         }
     }
 )
+
 
 local actions = require("telescope.actions")
 require("telescope").setup(
@@ -145,24 +154,7 @@ lspconfig.pyright.setup(
         capabilities = require("cmp_nvim_lsp").default_capabilities()
     }
 )	
-lspconfig.clangd.setup({
-    cmd = {
-    "clangd",
-     "--background-index",
-     "-j=12",
-     "--clang-tidy",
-     "--clang-tidy-checks=*",
-     "--all-scopes-completion",
-     "--cross-file-rename",
-     "--completion-style=detailed",
-     "--header-insertion-decorators",
-     "--header-insertion=iwyu",
-     "--pch-storage=memory",
-  },
-})
-lspconfig.groovyls.setup({})
 lspconfig.rust_analyzer.setup({})
-lspconfig.gradle_ls.setup({})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
