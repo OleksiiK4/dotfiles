@@ -28,6 +28,9 @@ Plug 'hrsh7th/vim-vsnip'
 
 Plug 'kdheepak/lazygit.nvim'
 
+Plug 'mrcjkb/rustaceanvim'
+Plug 'nvim-neotest/nvim-nio'
+
 Plug 'mfussenegger/nvim-dap'
 Plug 'mfussenegger/nvim-dap-python'
 
@@ -155,6 +158,8 @@ lspconfig.pyright.setup(
     }
 )	
 lspconfig.rust_analyzer.setup({})
+lspconfig.gradle_ls.setup({})
+lspconfig.tsserver.setup({})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
