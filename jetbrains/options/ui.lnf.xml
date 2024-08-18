@@ -1,0 +1,8 @@
+<application>
+  <component name="UISettings">
+    <option name="EDITOR_TAB_LIMIT" value="2" />
+    <option name="EDITOR_TAB_PLACEMENT" value="0" />
+    <option name="HIDE_KNOWN_EXTENSION_IN_TABS" value="true" />
+    <option name="HIDE_TABS_IF_NEED" value="false" />
+  </component>
+</application>

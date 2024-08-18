@@ -1,0 +1,18 @@
+<application>
+  <component name="LineMarkerSettings">
+    <option name="providers">
+      <map>
+        <entry key="RenderedDoc" value="false" />
+        <entry key="com.intellij.execution.lineMarker.RunLineMarkerProvider" value="true" />
+        <entry key="com.intellij.openapi.vcs.changes.ignore.codeInsight.IgnoreDirectoryMarkerProvider" value="true" />
+        <entry key="com.intellij.ui.ColorLineMarkerProvider" value="true" />
+        <entry key="org.rust.ide.lineMarkers.RsCrateDocLineMarkerProvider" value="true" />
+        <entry key="org.rust.ide.lineMarkers.RsImplsLineMarkerProvider" value="true" />
+        <entry key="org.rust.ide.lineMarkers.RsRecursiveCallLineMarkerProvider" value="true" />
+        <entry key="org.rust.toml.CargoCrateDocLineMarkerProvider" value="true" />
+        <entry key="rust.implementing.item" value="true" />
+        <entry key="rust.overriding.item" value="true" />
+      </map>
+    </option>
+  </component>
+</application>

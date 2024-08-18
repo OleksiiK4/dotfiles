@@ -1,0 +1,7 @@
+<application>
+  <component name="BlockTerminalUsage">
+    <shellToExecutedCommandsNumber>
+      <entry key="powershell" value="5" />
+    </shellToExecutedCommandsNumber>
+  </component>
+</application>
