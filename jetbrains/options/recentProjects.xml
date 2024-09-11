@@ -1,0 +1,40 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="D:/User/Projects/iolitebets-e2e-automation">
+          <value>
+            <RecentProjectMetaInfo frameTitle="iolitebets-e2e-automation – compareResult.js" projectWorkspaceId="2kIUhrZa5KfQxEFkadEIZ55BJaD">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="RR-241.17890.43" />
+              <option name="buildTimestamp" value="1721452620000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="0" />
+              </option>
+              <frame x="-9" y="-9" width="1938" height="1038" extendedState="6" />
+              <option name="productionCode" value="RR" />
+              <option name="projectOpenTimestamp" value="1722970706438" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="D:/User/Projects/btrade">
+          <value>
+            <RecentProjectMetaInfo frameTitle="btrade – utils\mod.rs" opened="true" projectWorkspaceId="2kVeQkRegXp2rOMCGNYMzo7HGgi">
+              <option name="activationTimestamp" value="1724006463377" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="RR-241.17890.43" />
+              <option name="buildTimestamp" value="1721452620000" />
+              <option name="colorInfo">
+                <RecentProjectColorInfo associatedIndex="5" />
+              </option>
+              <frame x="-9" y="-9" width="1938" height="1038" extendedState="6" />
+              <option name="productionCode" value="RR" />
+              <option name="projectOpenTimestamp" value="1723973192837" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastOpenedProject" value="D:/User/Projects/btrade" />
+  </component>
+</application>

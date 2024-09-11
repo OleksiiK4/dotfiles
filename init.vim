@@ -1,15 +1,19 @@
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'savq/melange-nvim'
 
+Plug 'gen740/SmoothCursor.nvim'
+Plug 'andymass/vim-matchup'
+Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
+Plug 'antoinemadec/FixCursorHold.nvim'
+Plug 'Pocco81/auto-save.nvim'
+
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-Plug 'williamboman/mason.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'mfussenegger/nvim-jdtls'
+Plug 'williamboman/mason.nvim'
 
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -21,19 +25,15 @@ Plug 'hrsh7th/vim-vsnip'
 
 Plug 'kdheepak/lazygit.nvim'
 
-Plug 'mrcjkb/rustaceanvim'
-
 Plug 'mfussenegger/nvim-dap'
 Plug 'mfussenegger/nvim-dap-python'
-Plug 'antoinemadec/FixCursorHold.nvim'
+
+Plug 'nvim-neotest/nvim-nio'
 Plug 'nvim-neotest/neotest'
 Plug 'nvim-neotest/neotest-plenary'
 Plug 'nvim-neotest/neotest-python'
-
-Plug 'Pocco81/auto-save.nvim'
 call plug#end()
 
-" FIXME override python env
 lua <<EOF
   local dap_py = require("dap-python")
   dap_py.setup("python")
@@ -48,19 +48,37 @@ lua <<EOF
   end)
 
 
-
-require("auto-save").setup({})
-
-require("plenary.async")
-
 require("mason").setup(
     {
         pickers = {
             current_buffer_fuzzy_find = {sorting_strategy = "ascending"},
-            ensure_installed = {"pyright", "clangd"}
         }
     }
 )
+
+require("neotest").setup(
+    {
+        adapters = {
+            require("neotest-python")(
+                {
+                    dap = {justMyCode = false},
+                    run = "pytest"
+                }
+            ),
+            require("neotest-plenary")
+        }
+    }
+)
+
+-- Setup language servers.
+local lspconfig = require("lspconfig")	
+lspconfig.tsserver.setup({})
+
+
+require("auto-save")
+
+require("plenary.async")
+
 
 local actions = require("telescope.actions")
 require("telescope").setup(
@@ -123,46 +141,6 @@ require("telescope").setup(
             }
     }
 )
-
-require("neotest").setup(
-    {
-        adapters = {
-            require("neotest-python")(
-                {
-                    dap = {justMyCode = false},
-                    run = "pytest"
-                }
-            ),
-            require("neotest-plenary")
-        }
-    }
-)
-
--- Setup language servers.
-local lspconfig = require("lspconfig")
-lspconfig.pyright.setup(
-    {
-        capabilities = require("cmp_nvim_lsp").default_capabilities()
-    }
-)	
-lspconfig.clangd.setup({
-    cmd = {
-    "clangd",
-     "--background-index",
-     "-j=12",
-     "--clang-tidy",
-     "--clang-tidy-checks=*",
-     "--all-scopes-completion",
-     "--cross-file-rename",
-     "--completion-style=detailed",
-     "--header-insertion-decorators",
-     "--header-insertion=iwyu",
-     "--pch-storage=memory",
-  },
-})
-lspconfig.groovyls.setup({})
-lspconfig.rust_analyzer.setup({})
-lspconfig.gradle_ls.setup({})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

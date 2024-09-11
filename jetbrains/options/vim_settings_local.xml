@@ -1,0 +1,288 @@
+<application>
+  <component name="VimHistorySettings">
+    <history>
+      <history-search>
+        <entry encoding="base64">XDxEZWFsXD4=</entry>
+        <entry encoding="base64">cXR5</entry>
+        <entry encoding="base64">Ig==</entry>
+      </history-search>
+      <history-cmd>
+        <entry encoding="base64">TmVyZFRSRUU=</entry>
+        <entry encoding="base64">TkVSRFRyZWU=</entry>
+        <entry encoding="base64">ZS4=</entry>
+        <entry encoding="base64">IWxhenlnaXQ=</entry>
+        <entry encoding="base64">MTc3</entry>
+        <entry encoding="base64">ZSBzcmMvdHJhZGVyL25ldy5ycw==</entry>
+        <entry encoding="base64">MTg2</entry>
+        <entry encoding="base64">cWE=</entry>
+        <entry encoding="base64">JzwsJz5zL3F0eS9tb2RlL2c=</entry>
+        <entry encoding="base64">cQ==</entry>
+        <entry encoding="base64">JzwsJz5zLyIvL2c=</entry>
+        <entry encoding="base64">IWNhcmdvIGZtdA==</entry>
+        <entry encoding="base64">dw==</entry>
+        <entry encoding="base64">d2E=</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+  </component>
+  <component name="VimJumpsSettings">
+    <project id="btrade-6664b72c">
+      <jump line="288" column="35" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="289" column="27" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="295" column="12" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="52" column="0" filename="D:/User/Projects/btrade/src/utils/mod.rs" protocol="file" />
+      <jump line="53" column="0" filename="D:/User/Projects/btrade/src/utils/mod.rs" protocol="file" />
+      <jump line="108" column="8" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="72" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="75" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="81" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="83" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="96" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="99" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="114" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="116" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="123" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="131" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="102" column="62" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="66" column="3" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="231" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="111" column="22" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="7" column="0" filename="D:/User/Projects/btrade/src/utils/time.rs" protocol="file" />
+      <jump line="13" column="16" filename="D:/User/Projects/btrade/src/utils/time.rs" protocol="file" />
+      <jump line="15" column="17" filename="D:/User/Projects/btrade/src/utils/time.rs" protocol="file" />
+      <jump line="16" column="17" filename="D:/User/Projects/btrade/src/utils/time.rs" protocol="file" />
+      <jump line="8" column="13" filename="D:/User/Projects/btrade/src/utils/time.rs" protocol="file" />
+      <jump line="57" column="3" filename="D:/User/Projects/btrade/src/utils/mod.rs" protocol="file" />
+      <jump line="112" column="28" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="14" column="25" filename="D:/User/Projects/btrade/src/utils/log.rs" protocol="file" />
+      <jump line="21" column="0" filename="D:/User/Projects/btrade/src/utils/log.rs" protocol="file" />
+      <jump line="114" column="29" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="96" column="27" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="70" column="8" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="69" column="25" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="68" column="15" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="63" column="0" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="66" column="25" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="106" column="11" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="107" column="19" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="19" column="4" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="80" column="48" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="228" column="58" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="11" column="31" filename="D:/User/Projects/btrade/src/utils/log.rs" protocol="file" />
+      <jump line="56" column="24" filename="D:/User/Projects/btrade/src/utils/mod.rs" protocol="file" />
+      <jump line="55" column="74" filename="D:/User/Projects/btrade/src/utils/mod.rs" protocol="file" />
+      <jump line="1" column="0" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="4" column="0" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="22" column="0" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="43" column="0" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="62" column="0" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="72" column="0" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="73" column="0" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="118" column="0" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="109" column="0" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="92" column="0" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="103" column="0" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="51" column="14" filename="D:/User/Projects/btrade/src/utils/mod.rs" protocol="file" />
+      <jump line="43" column="7" filename="D:/User/Projects/btrade/src/utils/mod.rs" protocol="file" />
+      <jump line="116" column="4" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="0" column="21" filename="D:/User/Projects/btrade/src/utils/time.rs" protocol="file" />
+      <jump line="24" column="12" filename="D:/User/Projects/btrade/src/utils/mod.rs" protocol="file" />
+      <jump line="6" column="0" filename="D:/User/Projects/btrade/src/utils/mod.rs" protocol="file" />
+      <jump line="70" column="28" filename="D:/User/Projects/btrade/src/utils/mod.rs" protocol="file" />
+      <jump line="14" column="9" filename="D:/User/Projects/btrade/src/utils/mod.rs" protocol="file" />
+      <jump line="3" column="0" filename="D:/User/Projects/btrade/src/trader/klines.rs" protocol="file" />
+      <jump line="25" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="31" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="40" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="44" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="52" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="84" column="20" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="109" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="107" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="92" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="89" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="3" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="6" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="16" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="32" column="0" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="293" column="72" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="146" column="0" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="147" column="0" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="151" column="0" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="156" column="0" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="161" column="0" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="169" column="0" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="211" column="0" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="323" column="4" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="1" column="13" filename="D:/User/Projects/btrade/src/trader/mod.rs" protocol="file" />
+      <jump line="61" column="13" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="59" column="24" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="23" column="4" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="28" column="19" filename="D:/User/Projects/btrade/src/utils/mod.rs" protocol="file" />
+      <jump line="42" column="29" filename="D:/User/Projects/btrade/src/utils/mod.rs" protocol="file" />
+      <jump line="25" column="13" filename="D:/User/Projects/btrade/src/utils/mod.rs" protocol="file" />
+      <jump line="78" column="29" filename="D:/User/Projects/btrade/src/main.rs" protocol="file" />
+      <jump line="311" column="0" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="50" column="24" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="8" column="0" filename="D:/User/Projects/btrade/src/utils/mod.rs" protocol="file" />
+      <jump line="28" column="10" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+      <jump line="34" column="33" filename="D:/User/Projects/btrade/src/trader/trader.rs" protocol="file" />
+    </project>
+    <project id="iolitebets-e2e-automation-fac6cb19">
+      <jump line="0" column="0" filename="D:/User/Projects/iolitebets-e2e-automation/README.md" protocol="file" />
+      <jump line="3" column="22" filename="D:/User/Projects/iolitebets-e2e-automation/e2e/test-utils/compareResult.js" protocol="file" />
+    </project>
+  </component>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <localmarks>
+      <file name="D:/User/Projects/btrade/src/trader/symbol.rs" timestamp="1724005855896">
+        <mark key="&quot;" line="0" column="0" />
+        <mark key="[" line="2" column="0" />
+        <mark key="]" line="2" column="0" />
+        <mark key="." line="2" column="0" />
+      </file>
+      <file name="D:/User/Projects/btrade/Cargo.lock" timestamp="1724003281651">
+        <mark key="&quot;" line="25" column="5" />
+      </file>
+      <file name="$USER_HOME$/AppData/Local/JetBrains/RustRover2024.1/intellij-rust/stdlib-local-copy/1.79.0-565d05110cfbdbe408ca212aad602918b6030f07/library/alloc/src/string.rs" timestamp="1723581784480">
+        <mark key="&quot;" line="2536" column="7" />
+      </file>
+      <file name="D:/User/Projects/btrade/src/utils/time.rs" timestamp="1724004874683">
+        <mark key="[" line="0" column="21" />
+        <mark key="]" line="0" column="21" />
+        <mark key="." line="0" column="21" />
+      </file>
+      <file name="D:/User/Projects/btrade/src/trader/mod.rs" timestamp="1724005680075">
+        <mark key="&quot;" line="1" column="13" />
+        <mark key="[" line="1" column="0" />
+        <mark key="]" line="1" column="0" />
+        <mark key="." line="1" column="0" />
+      </file>
+      <file name="D:/User/Projects/btrade/run" timestamp="1724002734570">
+        <mark key="&quot;" line="3" column="17" />
+      </file>
+      <file name="/Dummy.txt" timestamp="1724005864453">
+        <mark key="&quot;" line="0" column="0" />
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="0" column="0" />
+        <mark key="." line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/.cargo/registry/src/index.crates.io-6f17d22bba15001f/binance_spot_connector_rust-1.1.0/src/trade/mod.rs" timestamp="1724000898537">
+        <mark key="&quot;" line="75" column="24" />
+        <mark key="'" line="42" column="18" />
+      </file>
+      <file name="$USER_HOME$/AppData/Local/JetBrains/RustRover2024.1/intellij-rust/stdlib-local-copy/1.79.0-565d05110cfbdbe408ca212aad602918b6030f07/library/alloc/src/vec/mod.rs" timestamp="1724000898452">
+        <mark key="&quot;" line="422" column="14" />
+      </file>
+      <file name="$USER_HOME$/.cargo/registry/src/index.crates.io-6f17d22bba15001f/binance_spot_connector_rust-1.1.0/src/trade/order.rs" timestamp="1724001227020">
+        <mark key="&quot;" line="17" column="0" />
+      </file>
+      <file name="$USER_HOME$/.cargo/registry/src/index.crates.io-6f17d22bba15001f/binance_spot_connector_rust-1.1.0/src/http/error.rs" timestamp="1724002499184">
+        <mark key="&quot;" line="9" column="4" />
+      </file>
+      <file name="/" timestamp="1724002196825">
+        <mark key="&quot;" line="0" column="0" />
+      </file>
+      <file name="D:/User/Projects/btrade/src/trader/trader.rs" timestamp="1724005712491">
+        <mark key="&quot;" line="323" column="4" />
+        <mark key="'" line="211" column="0" />
+        <mark key="i" line="0" column="0" />
+        <mark key="[" line="315" column="40" />
+        <mark key="]" line="315" column="49" />
+        <mark key="." line="315" column="48" />
+        <mark key="^" line="315" column="49" />
+      </file>
+      <file name="$USER_HOME$/AppData/Local/JetBrains/RustRover2024.1/intellij-rust/stdlib-local-copy/1.79.0-565d05110cfbdbe408ca212aad602918b6030f07/library/core/src/macros/mod.rs" timestamp="1724000898484">
+        <mark key="&quot;" line="629" column="12" />
+      </file>
+      <file name="D:/User/Projects/btrade/src/utils/log.rs" timestamp="1724005336233">
+        <mark key="&quot;" line="11" column="18" />
+        <mark key="'" line="14" column="25" />
+        <mark key="^" line="12" column="98" />
+      </file>
+      <file name="D:/User/Projects/btrade/.gitignore" timestamp="1724005008350">
+        <mark key="&quot;" line="0" column="7" />
+      </file>
+      <file name="$USER_HOME$/AppData/Local/JetBrains/RustRover2024.1/intellij-rust/stdlib-local-copy/1.79.0-565d05110cfbdbe408ca212aad602918b6030f07/library/core/src/fmt/mod.rs" timestamp="1724000898502">
+        <mark key="&quot;" line="1407" column="37" />
+        <mark key="'" line="842" column="0" />
+      </file>
+      <file name="D:/User/Projects/btrade/src/trader/klines.rs" timestamp="1724005067871">
+        <mark key="'" line="0" column="4" />
+      </file>
+      <file name="D:/User/Projects/btrade/src/main.rs" timestamp="1724005827937">
+        <mark key="&quot;" line="78" column="29" />
+        <mark key="'" line="59" column="24" />
+        <mark key="[" line="61" column="21" />
+        <mark key="]" line="61" column="30" />
+        <mark key="^" line="61" column="30" />
+        <mark key="." line="61" column="29" />
+      </file>
+    </localmarks>
+  </component>
+  <component name="VimRegisterSettings">
+    <registers>
+      <register name="&quot;" type="LINE_WISE">
+        <text encoding="base64">aW1wciBsb2dnaW5nCg==</text>
+      </register>
+      <register name="-" type="CHARACTER_WISE">
+        <text encoding="base64">dG9fYXNjaWlfbG93ZXJjYXNl</text>
+      </register>
+      <register name="." type="CHARACTER_WISE">
+        <text encoding="base64">LmFzX3N0cigp</text>
+      </register>
+      <register name="/" type="CHARACTER_WISE">
+        <text encoding="base64">Ig==</text>
+      </register>
+      <register name="0" type="LINE_WISE">
+        <text encoding="base64">ICAgICAgICBtYXRjaCBnZXRfYXJnKEFyZ1R5cGU6Ok1vZGUpIHsKICAgICAgICAgICAgQXJnOjpNb2RlKG1vZGUpID0+IFNvbWUobW9kZSksCiAgICAgICAgICAgIF8gPT4gTm9uZQogICAgICAgIH0udW53cmFwKCkK</text>
+      </register>
+      <register name="1" type="LINE_WISE">
+        <text encoding="base64">aW1wciBsb2dnaW5nCg==</text>
+      </register>
+      <register name="2" type="LINE_WISE">
+        <text encoding="base64">dXNlIGNyYXRlOjp1dGlsczo6QXJnVHlwZTo6VHJhZGVQYWlyOwo=</text>
+      </register>
+      <register name="3" type="LINE_WISE">
+        <text encoding="base64">cHViIG1vZCBzeW1ib2w7Cg==</text>
+      </register>
+      <register name="4" type="LINE_WISE">
+        <text encoding="base64">dXNlIHN0ZDo6ZW52OjphcmdzOwo=</text>
+      </register>
+      <register name="5" type="LINE_WISE">
+        <text encoding="base64">dXNlIHN1cGVyOjpzeW1ib2w6OntnZXRfc3ltYm9sLCBTeW1ib2x9Owo=</text>
+      </register>
+      <register name="6" type="LINE_WISE">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="7" type="LINE_WISE">
+        <text encoding="base64">ICAgICAgICAgICAgbGV0IG1vZGUgID0gCg==</text>
+      </register>
+      <register name="8" type="CHARACTER_WISE">
+        <text encoding="base64">bWF0Y2ggZ2V0X2FyZyhBcmdUeXBlOjptb2RlKSB7CiAgICAgICAgICAgICAgICBBcmcgOjpNb2RlKG1vZGUpID0+IFNvbWUobW9kZSksCiAgICAgICAgICAgICAgICBfID0+IE5vbmUKICAgICAgICAgICAgfTsKICAgICAgICAgICAgbGV0IG1vZGUgPSBtb2RlLnVud3JhcCgpOw==</text>
+      </register>
+      <register name="9" type="LINE_WISE">
+        <text encoding="base64">dXNlIGNyYXRlOjp0cmFkZXI6OnN5bWJvbDo6Z2V0X3N5bWJvbDsK</text>
+      </register>
+      <register name=":" type="CHARACTER_WISE">
+        <text encoding="base64">d2E=</text>
+      </register>
+    </registers>
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-search encoding="base64">XDxEZWFsXD4=</last-search>
+      <last-substitute encoding="base64">Ig==</last-substitute>
+      <last-offset encoding="base64" />
+      <last-replace encoding="base64" />
+      <last-pattern encoding="base64">Ig==</last-pattern>
+      <last-dir encoding="base64">LTE=</last-dir>
+      <show-last encoding="base64">ZmFsc2U=</show-last>
+    </search>
+  </component>
+  <component name="VimVariables">
+    <vim-variables />
+  </component>
+</application>
