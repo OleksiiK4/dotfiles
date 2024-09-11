@@ -52,6 +52,7 @@ require("mason").setup(
     {
         pickers = {
             current_buffer_fuzzy_find = {sorting_strategy = "ascending"},
+            ensure_installed = {"pyright", "clangd", "jdtls", "cpplint", "cpptools", "rust-analyzer"}
         }
     }
 )

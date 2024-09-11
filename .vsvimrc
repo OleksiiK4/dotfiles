@@ -7,9 +7,4 @@ set incsearch
 
 map Q gq
 
-set visualbell
-set noerrorbells
-
-colorscheme abscs
-
 set clipboard=unnamed
