@@ -57,7 +57,7 @@ require("mason").setup(
     {
         pickers = {
             current_buffer_fuzzy_find = {sorting_strategy = "ascending"},
-            ensure_installed = {"pyright", "clangd"}
+            ensure_installed = {"pyright", "clangd", "jdtls", "cpplint", "cpptools", "rust-analyzer"}
         }
     }
 )
@@ -160,9 +160,7 @@ lspconfig.clangd.setup({
      "--pch-storage=memory",
   },
 })
-lspconfig.groovyls.setup({})
 lspconfig.rust_analyzer.setup({})
-lspconfig.gradle_ls.setup({})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

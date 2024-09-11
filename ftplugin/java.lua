@@ -1,11 +1,8 @@
 data = vim.fn.stdpath('data')
+local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 -- 💀
--- local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
-local project_name = 'j'
-local workspace_dir = 'D:/Projects/' .. project_name
-
 local config = {
-    cmd = {vim.fn.stdpath('data') .. "/mason/bin/jdtls.cmd"},
+    cmd = {data .. "/mason/bin/jdtls.cmd"},
     root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
 
         cmd = {
@@ -19,13 +16,10 @@ local config = {
       "-Declipse.product=org.eclipse.jdt.ls.core.product",
       "-Dlog.protocol=true",
       "-Dlog.level=ALL",
-      "-javaagent:" .. data .. "/mason/packages/jdtls/lombok.jar",
       "-Xms1g",
       "--add-modules=ALL-SYSTEM",
       "--add-opens",
       "java.base/java.util=ALL-UNNAMED",
-      "--add-opens",
-      "java.base/java.lang=ALL-UNNAMED",
 
       -- 💀
       "-jar",
@@ -44,7 +38,7 @@ local config = {
       -- 💀
       -- See `data directory configuration` section in the README
       "-data",
-      workspace_dir,
+      project_name .. "/..",
     },
     flags = {
       debounce_text_changes = 150,
@@ -65,15 +59,7 @@ local config = {
         signatureHelp = { enabled = true },
         configuration = {
           updateBuildConfiguration = "interactive",
-          runtimes = {
-            {
-              name = "JavaSE-17",
-              path = "C:/Program Files/Java/jdk-17",
-              default = true
-            },
-          },
         },
-
         eclipse = {
           downloadSources = true,
         },
