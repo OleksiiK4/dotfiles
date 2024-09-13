@@ -33,6 +33,8 @@ Plug 'nvim-neotest/nvim-nio'
 Plug 'nvim-neotest/neotest'
 Plug 'nvim-neotest/neotest-plenary'
 Plug 'nvim-neotest/neotest-python'
+
+Plug 'vim-autoformat/vim-autoformat'
 call plug#end()
 
 lua <<EOF
