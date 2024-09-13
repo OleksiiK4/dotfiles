@@ -25,6 +25,7 @@ Plug 'hrsh7th/vim-vsnip'
 
 Plug 'kdheepak/lazygit.nvim'
 
+Plug 'mfussenegger/nvim-jdtls'
 Plug 'mfussenegger/nvim-dap'
 Plug 'mfussenegger/nvim-dap-python'
 
@@ -71,15 +72,35 @@ require("neotest").setup(
     }
 )
 
--- Setup language servers.
-local lspconfig = require("lspconfig")	
-lspconfig.tsserver.setup({})
-
-
 require("auto-save")
 
 require("plenary.async")
 
+-- Setup language servers.
+local lspconfig = require("lspconfig")	
+lspconfig.tsserver.setup({})
+lspconfig.rust_analyzer.setup({})
+lspconfig.pyright.setup(
+    {
+        capabilities = require("cmp_nvim_lsp").default_capabilities()
+    }
+)	
+lspconfig.clangd.setup({
+    cmd = {
+    "clangd",
+    "--fallback-style=llvm",
+     "--background-index",
+     "-j=12",
+     "--clang-tidy",
+     "--clang-tidy-checks=*",
+     "--all-scopes-completion",
+     "--cross-file-rename",
+     "--completion-style=detailed",
+     "--header-insertion-decorators",
+     "--header-insertion=iwyu",
+     "--pch-storage=memory",
+  },
+})
 
 local actions = require("telescope.actions")
 require("telescope").setup(
