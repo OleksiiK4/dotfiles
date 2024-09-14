@@ -1,55 +1,16 @@
-call plug#begin(stdpath('data') . '/plugged')
-Plug 'savq/melange-nvim'
-
-Plug 'gen740/SmoothCursor.nvim'
-Plug 'andymass/vim-matchup'
-Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
-Plug 'antoinemadec/FixCursorHold.nvim'
-Plug 'Pocco81/auto-save.nvim'
-
-Plug 'nvim-telescope/telescope-fzy-native.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/mason.nvim'
-
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/vim-vsnip'
-
-Plug 'kdheepak/lazygit.nvim'
-
-Plug 'mfussenegger/nvim-jdtls'
-Plug 'mfussenegger/nvim-dap'
-Plug 'mfussenegger/nvim-dap-python'
-
-Plug 'nvim-neotest/nvim-nio'
-Plug 'nvim-neotest/neotest'
-Plug 'nvim-neotest/neotest-plenary'
-Plug 'nvim-neotest/neotest-python'
-
-Plug 'vim-autoformat/vim-autoformat'
-call plug#end()
-
-lua <<EOF
-  local dap_py = require("dap-python")
+local has_dap_py, dap_py = pcall(require,"dap-python")
+if has_dap_py then
   dap_py.setup("python")
   dap_py.test_runner = "pytest"
   vim.keymap.set('n', '<Leader>tm', function()
-      vim.cmd('wa')
-      dap_py.test_method()
+     vim.cmd('wa')
+     dap_py.test_method()
   end)
   vim.keymap.set('n', '<Leader>tc', function()
-      vim.cmd('wa')
-      dap_py.test_class()
+     vim.cmd('wa')
+     dap_py.test_class()
   end)
-
+end
 
 require("mason").setup(
     {
@@ -165,13 +126,6 @@ require("telescope").setup(
             }
     }
 )
-
--- Global mappings.
--- See `:help vim.diagnostic.*` for documentation on any of the below functions
-vim.keymap.set("n", "<space>d", vim.diagnostic.open_float)
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist)
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
@@ -298,38 +252,12 @@ cmp.setup.cmdline(
     }
 )
 
-vim.opt.shadafile = "NONE"
-EOF
+vim.cmd 'colorscheme melange'
 
-set termguicolors
-colorscheme melange
-
-set clipboard+=unnamedplus	
-
-set nobackup       "no backup files
-set nowritebackup  "only in case you don't want a backup file while editing
-set autoread
-set noswapfile     "no swap file
-
-set shiftwidth=2
-
-" Using Telescope functions
-nnoremap <space>ff :wa<cr>:lua require('telescope.builtin').find_files()<cr>
-nnoremap <space>fg :wa<cr>:lua require('telescope.builtin').live_grep()<cr>
-nnoremap <space>fb :wa<cr>:lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
-
-nnoremap <silent> <space>ee :lua require('dap').repl.open()<CR>
-nnoremap <silent> <space>tb :lua require('dap').toggle_breakpoint()<CR>
-nnoremap <silent> <space>ts :lua require('dap').close()<CR>
-nnoremap <silent> <space>cc :lua require('dap').continue()<CR>
-nnoremap <silent> <space>pp :lua require('dap').pause()<CR>
-
-" setup mapping to call :LazyGit
-nnoremap <silent> <space>gg :LazyGit<CR>
-
-nnoremap <space>e <cmd>w<cr><cmd>e.<cr>
-nnoremap <space>E <cmd>w<cr><cmd>Ex<cr>
-
-inoremap <C-C> <Esc>
-
-
+vim.opt.shadafile = 'NONE'
+vim.opt.termguicolors = true
+vim.o.clipboard = 'unnamedplus'	
+vim.opt.writebackup = false
+vim.opt.autoread = true
+vim.opt.swapfile = false -- no swap file
+vim.opt.shiftwidth = 2
