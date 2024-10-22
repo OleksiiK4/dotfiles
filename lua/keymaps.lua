@@ -28,8 +28,9 @@ keymap("n", "<space>ts", function() require("dap").close() end, snoremap)
 keymap("n", "<space>cc", function() require("dap").continue() end, snoremap)
 keymap("n", "<space>pp", function() require("dap").pause() end, snoremap)
 
--- Setup mapping to call :LazyGit
-keymap("n", "<space>gg", function() vim.cmd 'LazyGit' end, snoremap)
+-- Setup mapping to call :FloatermNew lazygit
+keymap("n", "<space>gg", function() vim.cmd 'FloatermNew --disposable --width=1000 --height=1800 lazygit --debug' end, snoremap)
+keymap("n", "<C-c>", function() vim.cmd 'FloatermKill' end, snoremap)
 
 -- Navigation
 keymap("n", "<space>e", function()

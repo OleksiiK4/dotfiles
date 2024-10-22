@@ -21,17 +21,22 @@ require("mason").setup(
     }
 )
 
+local neotest_adapters = {}
+local required_adapters = {
+				{"neotest-python", function (name) require(name)( { dap = {justMyCode = false}, run = "pytest" }) end },
+				{ "neotest-plenary" ,function (name) require(name) end }
+			   }
+for idx=1, #required_adapters do 
+	local adapter = required_adapters[idx][1]
+	local has_adapter, neotest_py = pcall(require, adapter)
+	if has_adapter then
+		neotest_adapters[idx] = required_adapters[idx][2](adapter)
+	end
+end
+
 require("neotest").setup(
     {
-        adapters = {
-            require("neotest-python")(
-                {
-                    dap = {justMyCode = false},
-                    run = "pytest"
-                }
-            ),
-            require("neotest-plenary")
-        }
+        adapters = neotest_adapters
     }
 )
 
@@ -41,7 +46,15 @@ require("plenary.async")
 
 -- Setup language servers.
 local lspconfig = require("lspconfig")	
-lspconfig.tsserver.setup({})
+lspconfig.ts_ls.setup({
+ init_options = { 
+    preferences = { 
+      -- other preferences... 
+      importModuleSpecifierPreference = 'relative', 
+      importModuleSpecifierEnding = 'minimal', 
+    },  
+  } 
+})
 lspconfig.rust_analyzer.setup({})
 lspconfig.pyright.setup(
     {
@@ -80,7 +93,7 @@ require("telescope").setup(
             '%.tar.gz', '%.tar', '%.zip', '%.class', '%.pdb', '%.dll', '%.bak', "%.lib", "^.idea",
             '%.scan', '%.mca', '__pycache__', '^.mozilla/', '^.electron/', '%.bin', "^debug",
             '^.vpython-root/', '^.gradle/', '^.nuget/', '^.cargo/', '^.evernote/', "^Debug",
-            '^.azure-functions-core-tools/', '^yay/', '%.class', '%.o', '%.so', "^Release",
+            '^.azure-functions-core-tools/', '^yay/', '%.class', '%.o', '%.so', "^Release"
         },
         path_display = { "smart" },
             mappings = {
