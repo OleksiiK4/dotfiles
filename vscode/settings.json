@@ -1,0 +1,63 @@
+{  
+    "vim.leader": "<space>",
+    "files.autoSave": "afterDelay",
+    "files.eol": "\r\n",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[python,typescript,rust]": {
+        "editor.formatOnType": true
+    },
+    "git.confirmSync": false,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "g",
+            ],
+            "commands": [
+                "workbench.action.findInFiles"
+            ]
+        },       
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "n",
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },       
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "b",
+            ],
+            "commands": [
+                "actions.find"
+            ]
+        },       
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "g",
+            ],
+            "commands": [
+                "workbench.view.scm"
+            ]
+        },       
+        {
+            "before": [
+                "<leader>",
+                "f",
+                "f",
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },       
+    ],
+    "git.enableSmartCommit": true
+}
