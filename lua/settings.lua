@@ -3,8 +3,7 @@ if has_dap_py then
   dap_py.setup("python")
   dap_py.test_runner = "pytest"
   vim.keymap.set('n', '<Leader>tm', function()
-     vim.cmd('wa')
-     dap_py.test_method()
+     vim.cmd('wa') dap_py.test_method()
   end)
   vim.keymap.set('n', '<Leader>tc', function()
      vim.cmd('wa')
@@ -18,8 +17,11 @@ require("mason").setup(
             current_buffer_fuzzy_find = {sorting_strategy = "ascending"},
             ensure_installed = {"pyright", "clangd", "jdtls", "cpplint", "cpptools", "rust-analyzer"}
         }
-    }
-)
+    })
+require("neotest").setup(
+    {
+        adapters = neotest_adapters
+    })
 
 local neotest_adapters = {}
 local required_adapters = {
@@ -34,33 +36,22 @@ for idx=1, #required_adapters do
 	end
 end
 
-require("neotest").setup(
-    {
-        adapters = neotest_adapters
-    }
-)
-
 require("auto-save")
-
 require("plenary.async")
 
--- Setup language servers.
 local lspconfig = require("lspconfig")	
-lspconfig.ts_ls.setup({
- init_options = { 
-    preferences = { 
-      -- other preferences... 
-      importModuleSpecifierPreference = 'relative', 
-      importModuleSpecifierEnding = 'minimal', 
-    },  
-  } 
+lspconfig.vtsls.setup({
+  refactor_move_to_file = {
+    -- If dressing.nvim is installed, telescope will be used for selection prompt. Use this to customize
+    -- the opts for telescope picker.
+    telescope_opts = function(items, default) end,
+  }
 })
 lspconfig.rust_analyzer.setup({})
 lspconfig.pyright.setup(
     {
         capabilities = require("cmp_nvim_lsp").default_capabilities()
-    }
-)	
+    })	
 lspconfig.clangd.setup({
     cmd = {
     "clangd",
@@ -87,10 +78,10 @@ require("telescope").setup(
         },
         file_ignore_patterns = {
             '^.git/', '^target/', '^node%_modules/', '^.npm/', '^build/', '%[Cc]ache/', '%-cache',
-            '^.dropbox/', '^.dropbox_trashed/', '%.py[co]', '%.sw?', '%~', '%.a', "%.npz", "^.vscode",
+            '^.dropbox/', '^.dropbox_trashed/', '%.py[co]', '%.sw?', '%~', '%.a', "%.npz",
             '%.sql', '%.tags', '%.gemtags', '%.csv', '%.tsv', '%.tmp', '%.exe', "%.dat", "^dist",
             '%.old', '%.plist', '%.pdf', '%.log', '%.jpg', '%.jpeg', '%.png', "%.obj", "^release",
-            '%.tar.gz', '%.tar', '%.zip', '%.class', '%.pdb', '%.dll', '%.bak', "%.lib", "^.idea",
+            '%.tar.gz', '%.tar', '%.zip', '%.class', '%.pdb', '%.dll', '%.bak', "%.lib",
             '%.scan', '%.mca', '__pycache__', '^.mozilla/', '^.electron/', '%.bin', "^debug",
             '^.vpython-root/', '^.gradle/', '^.nuget/', '^.cargo/', '^.evernote/', "^Debug",
             '^.azure-functions-core-tools/', '^yay/', '%.class', '%.o', '%.so', "^Release"
@@ -212,9 +203,6 @@ cmp.setup(
             {
                 {name = "nvim_lsp"},
                 {name = "vsnip"} -- For vsnip users.
-                -- { name = 'luasnip' }, -- For luasnip users.
-                -- { name = 'ultisnips' }, -- For ultisnips users.
-                -- { name = 'snippy' }, -- For snippy users.
             },
             {
                 {name = "buffer"}
